@@ -59,11 +59,7 @@ data:
       client
       nobind
       dev tun
-{{- if eq .Values.service.type "NodePort" }}
-      remote ${MY_IP_ADDR} {{ .Values.service.nodePort }} {{ .Values.openvpn.OVPN_PROTO }}
-{{- else }}
       remote ${MY_IP_ADDR} {{ .Values.service.externalPort }} {{ .Values.openvpn.OVPN_PROTO }}
-{{- end }}
       {{ if .Values.openvpn.cipher }}
       cipher {{ .Values.openvpn.cipher }}
       {{- end }}
