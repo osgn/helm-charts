@@ -97,7 +97,7 @@ openvpn:
   # Use/generate a ta.key (https://openvpn.net/community-resources/hardening-openvpn-security/)
   taKey: true
   # Override default cipher
-  # cipher: AES-256-CBC
+  cipher: AES-256-CBC
   # Lines appended to the end of the server configuration file
   # serverConf: |
   #  max-clients 100
